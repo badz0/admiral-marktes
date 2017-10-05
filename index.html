@@ -4,18 +4,21 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <base href="/">
-    <link href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" rel='stylesheet' type='text/css'>
-    <link href="//fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
-    <!--<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">-->
-    <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <title>DAX30</title>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
     <link href="./css/styles.css" rel="stylesheet" type="text/css">
     <link href="./css/components/libs/slick.css" rel="stylesheet" type="text/css">
-    
 </head>
 
 <body>
+    <!--[if IE]>
+    <style>
+        .specification {
+            opacity: .3;
+        }
+    </style>
+    <![endif]-->
     <section class="dax30-main">
         <div class="dax30-container">
             <h1 class="dax30-main__title">
@@ -159,7 +162,48 @@
             <p class="dax30-live__text dax30-text">
                 Find out the real-time DAX 30 price, global media sentiment on future index moves and much more...
             </p>
-            <iframe frameborder="0" width="100%" height="auto" class="dax30-live__frame"></iframe>
+            <div class="dax30-live__status-wrapper">
+                <div class="dax30-live__status">
+                    <svg class="dax30-live__status-arrow-down" width="16px" height="10px" viewBox="0 0 16 10" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <g id="Instruments" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g id="AM-5.0-Instruments-page-2.1" transform="translate(-183.000000, -1491.000000)" fill-rule="nonzero" fill="#DA1924">
+                                <g id="Section" transform="translate(0.000000, 1266.000000)">
+                                    <g id="Current-state" transform="translate(140.000000, 195.000000)">
+                                        <g id="Group-3" transform="translate(43.000000, 20.000000)">
+                                            <polygon id="Shape" points="0 11.6274067 6.9996134 18.525316 7.82621004 19.3399022 8.6531655 18.5256691 15.6588546 11.6277598 14.005661 10 6.99997191 16.8979093 8.65352401 16.8982624 1.65391062 10.0003532"></polygon>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
+                    <span class="dax30-live__status-text">
+                        1224.980
+                    </span>
+                    <span class="dax30-live__status-text--green">+0.8%</span>
+                </div>
+                <div class="dax30-live__btns-wrapper">
+                    <a href="#" class="dax30-live__sell-btn custom-btn">SELL 1224.840</a>
+                    <a href="#" class="dax30-live__buy-btn custom-btn">BUY 1225.283</a>
+                </div>
+            </div>
+            <div class="dax30-live__data-line">
+                Open: <span class="dax30-live__data-line--black"> 1.10200</span> High: <span class="dax30-live__data-line--green">1.10200</span>                Low: <span class="dax30-live__data-line--red">1.10200</span>
+                <span class="dax30-live__data-line--blue">+90</span> pips during last 24 trading hours
+            </div>
+            <div class="dax30-live__charts">
+                <div class="dax30-live__tabs">
+                    <button class="dax30-live__tab-btn" id="dax30-hours-btn">4 hours</button>
+                    <button class="dax30-live__tab-btn" id="dax30-day-btn">1 day</button>
+                    <button class="dax30-live__tab-btn" id="dax30-week-btn">1 week</button>
+                    <button class="dax30-live__tab-btn active-tab" id="dax30-month-btn">1 month</button>
+                </div>
+                <div class="dax30-live__chart">
+                    <canvas class="dax30-live__canvas-chart" id="dax30-chart" width="800" height="450"></canvas>
+                </div>
+            </div>
+            <iframe frameborder="0" width="100%" height="300" class="dax30-live__frame"></iframe>
             <h3 class="dax30-live__spec-subtitle dax30-subtitle">
                 CONTRACT SPECIFICATIONS
             </h3>
@@ -205,8 +249,8 @@
                         <p class="specification__prop">SWAP Value (Short), Interest Rate</p>
                         <p class="specification__value">-1.88</p>
                     </div>
-                    <div class="specification__link">
-                        <a href="#">More Details</a>
+                    <div class="specification__link-wrapper">
+                        <a href="#" class="specification__link">More Details</a>
                     </div>
                 </div>
                 <div class="dax30-live__specification specification" name="Admiral.Markets">
@@ -248,8 +292,8 @@
                         <p class="specification__prop">SWAP Value (Short), Interest Rate</p>
                         <p class="specification__value">-1.88</p>
                     </div>
-                    <div class="specification__link">
-                        <a href="#">More Details</a>
+                    <div class="specification__link-wrapper">
+                        <a href="#" class="specification__link">More Details</a>
                     </div>
                 </div>
 
@@ -291,13 +335,12 @@
                     <div class="specification__row">
                         <p class="specification__prop">SWAP Value (Short), Interest Rate</p>
                         <p class="specification__value">-1.88</p>
-                    </div>
-                    <div class="specification__link">
-                        <a href="#">More Details</a>
+                        <div class="specification__link-wrapper">
+                            <a href="#" class="specification__link">More Details</a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
     </section>
     <section class="dax30-advantages">
         <div class="dax30-container">
@@ -348,36 +391,6 @@
                 </div>
                 <div class="dax30-advantages__benefit">
                     <div class="dax30-advantages__benefit-icon">
-                        <svg aria-label="Benefit icon" width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                            xmlns:xlink="http://www.w3.org/1999/xlink">
-                            <g id="Instruments" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                <g id="AM-5.0-Instruments-page-2.1" transform="translate(-554.000000, -3522.000000)">
-                                    <g id="Section" transform="translate(0.000000, 3287.000000)">
-                                        <g id="Benefit" transform="translate(440.000000, 221.000000)">
-                                            <g id="icon-81" transform="translate(115.000000, 15.000000)">
-                                                <circle id="Oval-2" stroke="#2572DE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" cx="15" cy="15" r="15"></circle>
-                                                <path d="M18.0341797,17.203125 L14.0634766,17.203125 L14.0634766,17.2773438 C14.0634766,18.0937541 14.2722147,18.7215147 14.6896973,19.1606445 C15.1071798,19.5997743 15.687008,19.8193359 16.4291992,19.8193359 C16.787925,19.8193359 17.1389143,19.7930504 17.4821777,19.7404785 C17.8254412,19.6879066 18.1547836,19.60905 18.4702148,19.5039062 L18.6650391,21.6098633 C18.3124982,21.7026372 17.947593,21.7737628 17.5703125,21.8232422 C17.193032,21.8727216 16.8126647,21.8974609 16.4291992,21.8974609 C14.9138922,21.8974609 13.689295,21.4799846 12.7553711,20.6450195 C11.8214472,19.8100544 11.3544922,18.6875071 11.3544922,17.2773438 L11.3544922,17.203125 L10,17.203125 L10,15.7836914 L11.3544922,15.7836914 L11.3544922,14.3920898 L10,14.3920898 L10,12.9726562 L11.3544922,12.9726562 L11.3544922,12.8520508 C11.3544922,11.3800382 11.8199009,10.2033735 12.7507324,9.32202148 C13.6815639,8.44066942 14.9015224,8 16.4106445,8 C16.7817401,8 17.1450991,8.02473934 17.5007324,8.07421875 C17.8563657,8.12369816 18.244464,8.19482375 18.6650391,8.28759766 L18.4702148,10.4121094 C18.1424137,10.3131505 17.8037941,10.2342939 17.4543457,10.1755371 C17.1048973,10.1167803 16.7570004,10.0874023 16.4106445,10.0874023 C15.6808232,10.0874023 15.1071798,10.3317033 14.6896973,10.8203125 C14.2722147,11.3089217 14.0634766,11.9799762 14.0634766,12.8334961 L14.0634766,12.9726562 L18.0341797,12.9726562 L18.0341797,14.3920898 L14.0634766,14.3920898 L14.0634766,15.7836914 L18.0341797,15.7836914 L18.0341797,17.203125 Z"
-                                                    id="€" fill="#2572DE"></path>
-                                            </g>
-                                        </g>
-                                    </g>
-                                </g>
-                            </g>
-                        </svg>
-                    </div>
-                    <div class="dax30-advantages__benefit-body">
-                        <h4 class="dax30-advantages__benefit-title">
-                            Global Scale
-                        </h4>
-                        <p class="dax30-advantages__benefit-text dax30-text">
-                            Most of the companies in the DAX 30 index have globally-recognisable businesses, so international changes may have an impact
-                            on the index. With DAX 30 you may benefit from the fluctuations occurring in the global, as well
-                            as domestic, markets.
-                        </p>
-                    </div>
-                </div>
-                <div class="dax30-advantages__benefit">
-                    <div class="dax30-advantages__benefit-icon">
                         <svg aria-label="Benefit icon" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"
                             xmlns:xlink="http://www.w3.org/1999/xlink">
                             <g id="Instruments" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
@@ -403,6 +416,36 @@
                         <p class="dax30-advantages__benefit-text dax30-text">
                             DAX30 is often labelled as a proxy for European sentiment, since it’s the major index of the largest economy in the EU. Trading
                             it allows you to tap into the German market.
+                        </p>
+                    </div>
+                </div>
+                <div class="dax30-advantages__benefit">
+                    <div class="dax30-advantages__benefit-icon">
+                        <svg aria-label="Benefit icon" width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <g id="Instruments" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <g id="AM-5.0-Instruments-page-2.1" transform="translate(-554.000000, -3522.000000)">
+                                    <g id="Section" transform="translate(0.000000, 3287.000000)">
+                                        <g id="Benefit" transform="translate(440.000000, 221.000000)">
+                                            <g id="icon-81" transform="translate(115.000000, 15.000000)">
+                                                <circle id="Oval-2" stroke="#2572DE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" cx="15" cy="15" r="15"></circle>
+                                                <path d="M18.0341797,17.203125 L14.0634766,17.203125 L14.0634766,17.2773438 C14.0634766,18.0937541 14.2722147,18.7215147 14.6896973,19.1606445 C15.1071798,19.5997743 15.687008,19.8193359 16.4291992,19.8193359 C16.787925,19.8193359 17.1389143,19.7930504 17.4821777,19.7404785 C17.8254412,19.6879066 18.1547836,19.60905 18.4702148,19.5039062 L18.6650391,21.6098633 C18.3124982,21.7026372 17.947593,21.7737628 17.5703125,21.8232422 C17.193032,21.8727216 16.8126647,21.8974609 16.4291992,21.8974609 C14.9138922,21.8974609 13.689295,21.4799846 12.7553711,20.6450195 C11.8214472,19.8100544 11.3544922,18.6875071 11.3544922,17.2773438 L11.3544922,17.203125 L10,17.203125 L10,15.7836914 L11.3544922,15.7836914 L11.3544922,14.3920898 L10,14.3920898 L10,12.9726562 L11.3544922,12.9726562 L11.3544922,12.8520508 C11.3544922,11.3800382 11.8199009,10.2033735 12.7507324,9.32202148 C13.6815639,8.44066942 14.9015224,8 16.4106445,8 C16.7817401,8 17.1450991,8.02473934 17.5007324,8.07421875 C17.8563657,8.12369816 18.244464,8.19482375 18.6650391,8.28759766 L18.4702148,10.4121094 C18.1424137,10.3131505 17.8037941,10.2342939 17.4543457,10.1755371 C17.1048973,10.1167803 16.7570004,10.0874023 16.4106445,10.0874023 C15.6808232,10.0874023 15.1071798,10.3317033 14.6896973,10.8203125 C14.2722147,11.3089217 14.0634766,11.9799762 14.0634766,12.8334961 L14.0634766,12.9726562 L18.0341797,12.9726562 L18.0341797,14.3920898 L14.0634766,14.3920898 L14.0634766,15.7836914 L18.0341797,15.7836914 L18.0341797,17.203125 Z"
+                                                    id="€" fill="#2572DE"></path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="dax30-advantages__benefit-body">
+                        <h4 class="dax30-advantages__benefit-title">
+                            Global Scale
+                        </h4>
+                        <p class="dax30-advantages__benefit-text dax30-text">
+                            Most of the companies in the DAX 30 index have globally-recognisable businesses, so international changes may have an impact
+                            on the index. With DAX 30 you may benefit from the fluctuations occurring in the global, as well
+                            as domestic, markets.
                         </p>
                     </div>
                 </div>
@@ -609,6 +652,19 @@
                 </div>
                 <div class="dax30-why-trade__reason">
                     <div class="dax30-why-trade__reason-icon">
+                        <img src="./imgs/shield-icon.png">
+                    </div>
+                    <div class="dax30-why-trade__reason-body">
+                        <h4 class="dax30-why-trade__reason-title">
+                            Reduced Market Risk
+                        </h4>
+                        <p class="dax30-why-trade__reason-text dax30-text dax30-text">
+                            We offer Volatility Protection settings and a Negative Balance Protection policy
+                        </p>
+                    </div>
+                </div>
+                <div class="dax30-why-trade__reason">
+                    <div class="dax30-why-trade__reason-icon">
                         <svg aria-label="Reason icon" width="33px" height="30px" viewBox="0 0 33 30" version="1.1" xmlns="http://www.w3.org/2000/svg"
                             xmlns:xlink="http://www.w3.org/1999/xlink">
                             <g id="Instruments" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -638,23 +694,6 @@
                         </h4>
                         <p class="dax30-why-trade__reason-text dax30-text dax30-text">
                             We offer the possibility to open positions 500 times greater than your balance.
-                        </p>
-                    </div>
-                </div>
-                <div class="dax30-why-trade__reason">
-                    <div class="dax30-why-trade__reason-icon">
-                        <svg aria-label="Reason icon" xmlns="http://www.w3.org/2000/svg" width="28px" height="32px" xmlns:xlink="http://www.w3.org/1999/xlink"
-                            width="0.988cm" height="1.129cm">
-                            <image x="0px" y="0px" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAgCAMAAAA2a+hwAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABQVBMVEUAAAD///8mct8lc98lct85juMnc+Amc98seukmdOAmct4lct4lc94ndOAmc94mc+Amct8lct8mct4mct8lc98lc98mdN5Jkv8mc98mc94mc94mc98ocuQmc98ndOEndd8od+OAgP8mc+Ymct4mct8teOE3gO0mc94mc98ndt4rgOomc98nduIlc94mc94zgOYlct8mc98rd+Ylc98mcuFAgN8mct8meOEudOgmc94lct8lc94rgP8mc98qd+Emct4mc98lct4rc+Elc94nct4mc+Amct8md94ndN8lc95Vqv8mct8nduIrgOMlct4lct8oeN8mc98mc98lc98mc94mc98mct4pc+Emc98lc94ndOApdeMmct4mct8zmf8mdN8lct8mc98lct8sdeIlc94mct8lc94lct8mc94lct7///+LrWCnAAAAaXRSTlMAAVfV1AlbzxdRnPHiY5tJho+jt9zGZQf08rt+JnFcSC0CFMS1EQ7K2CcMxRrj+QrA4B73QwjkIguV9T4G5yvzveoqs1Wi7S9wsgPdNBL4/CCfwZ6MqapF7tpCJdKhBXn27GAjur7p/tG/LHZhAAAAAWJLR0QB/wIt3gAAAAd0SU1FB+EKAwwhIYAlKREAAAFeSURBVCjPzZHXQsJAEEUXpPfee1GxYReNoggqoCGIKL2DcP//B0yMofPuvMydPdnM3RlCZiESb0nEIrIupDI52JDLpMtEoVSpAY1WqwHUOqXi71hvMJrMFu6O1WYnxG6zctpiNhkNeuLgNJwut0f4i8ftcv4eOgjg9fkDwcUuwYDf5wVYSDbE/4GhcGQjjMoR3gS3d7CrWIKxGJ/39mE5WO55eKTnUvwYJ6crhgw4OyfkwoXLq5lbBxK8vsYNdRvBnbCABDt4CZJ8IVLh/gGpR8FYEhKSRkZYxRPw/DJ1nUGaZJETyrzu9W32pByyhC4wxXXDKzIFmpB3lPKrLF/CB5toDcorTFSGJsoJisFnfJHFv8BQvKxUUavPs3oN1YpQNJpAKzTdWAtoNmaftjtd9Pq87vfQ7bQXugyGwIidnGcEDAcrBmUpFNzuAr5l655Nq8bAWEWT9UFNJtR8/QPAL1dkCkOgPQAAAABJRU5ErkJggg=="
-                            />
-                        </svg>
-                    </div>
-                    <div class="dax30-why-trade__reason-body">
-                        <h4 class="dax30-why-trade__reason-title">
-                            Reduced Market Risk
-                        </h4>
-                        <p class="dax30-why-trade__reason-text dax30-text dax30-text">
-                            We offer Volatility Protection settings and a Negative Balance Protection policy
                         </p>
                     </div>
                 </div>
@@ -784,7 +823,9 @@
                 </div>
 
             </div>
-            <a href="#" class="dax30-why-trade__btn custom-btn">START LIVE TRADING</a>
+            <div class="dax30-why-trade__btn-wrapper">
+                <a href="#" class="dax30-why-trade__btn custom-btn">START LIVE TRADING</a>
+            </div>
 
         </div>
     </section>
@@ -917,14 +958,17 @@
     </section>
 
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- <script type="text/javascript" src="js/libs/slick.min.js"></script> -->
     <script type="text/javascript" src="./js/libs/slick.min.js"></script>
-    <script type="text/javascript" src="./js/bundle.js"></script>
+    <script type="text/javascript" src="./js/libs/moment.min.js"></script>
+    <script type="text/javascript" src="./js/libs/Chart.min.js"></script>
+    <script type="text/javascript" src="js/bundle.js"></script>
     <!--<script type="text/javascript" src="../js/vendors/bootstrap-select.js"></script>-->
     <!--[if lt IE 9]>
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
+
 </body>
 
 
