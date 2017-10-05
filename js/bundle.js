@@ -240,7 +240,6 @@
 					values.push({ x: rounded, y: item.volume });
 				}
 			});
-			console.log(data, values);
 			chart = new Chart(document.getElementById("dax30-chart"), {
 				type: 'line',
 				data: {

@@ -358,6 +358,8 @@ button {
     line-height: 16px;
     cursor: pointer;
     text-transform: uppercase; }
+    .dax30-live__tab-btn:focus {
+      outline: none; }
   .dax30-live__tab-btn.active-tab {
     opacity: 1;
     color: #2572DE;
@@ -369,6 +371,8 @@ button {
        -moz-border-radius: 6px;
             border-radius: 6px;
     padding: 40px 0; }
+  .dax30-live__global-title {
+    margin-bottom: 10px; }
   .dax30-live__specifications-slider {
     position: relative; }
     .dax30-live__specifications-slider .slick-arrow {

@@ -134,6 +134,9 @@ $screen-lg-min: 1200px;
     line-height: 16px;
     cursor: pointer;
     text-transform: uppercase;
+    &:focus {
+      outline: none;
+    }
   }
   &__tab-btn.active-tab {
     opacity: 1;
@@ -146,6 +149,10 @@ $screen-lg-min: 1200px;
     background-color: #fff;
     border-radius: 6px;
     padding: 40px 0;
+  }
+
+  &__global-title {
+    margin-bottom: 10px;
   }
   &__specifications-slider {
     position: relative;
