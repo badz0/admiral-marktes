@@ -86,17 +86,31 @@
     position: relative;
     background-color: #fff; }
   .dax30-live__tabs {
-    height: 67px;
+    min-height: 67px;
     padding: 0 20px;
     -webkit-box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.06);
        -moz-box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.06);
             box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.06);
-    margin-bottom: 40px; }
+    margin-bottom: 40px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: stretch;
+    -webkit-align-items: stretch;
+       -moz-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+       -moz-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start; }
   .dax30-live__tab-btn {
     display: inline-block;
     background: none;
     border: none;
-    height: 100%;
     width: 23%;
     opacity: 0.5;
     color: #8B8EA7;
