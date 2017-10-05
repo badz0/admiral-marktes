@@ -21,9 +21,10 @@ $screen-lg-min: 1200px;
     box-sizing: border-box;
   }
 
-  &__reason--on-desktop {
+  &__reasons--on-desktop {
     display: none;
   }
+  
   &__reason-icon {
     height: 60px;
     width: 60px;

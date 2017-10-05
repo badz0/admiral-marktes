@@ -8,7 +8,7 @@
 		initSpecSlider();
 		initMonthChart();
 	});
-
+	var chart;
 	function initTabs() {
 		$('.dax30-live__tab-btn').click(function (event) {
 			if ($(event.target).hasClass('active-tab')) return;
@@ -120,6 +120,7 @@
 	};
 
 	function initMonthChart() {
+		chart && chart.destroy();
 		$.get("./month-data.json", function (data) {
 			var values = [];
 			data.forEach(function (item, index) {
@@ -131,7 +132,7 @@
 				}
 			});
 
-			new Chart(document.getElementById("dax30-chart"), {
+			chart = new Chart(document.getElementById("dax30-chart"), {
 				type: 'line',
 				data: {
 					datasets: [{
@@ -146,6 +147,7 @@
 		});
 	}
 	function initWeekChart() {
+		chart && chart.destroy();
 		$.get("./month-data.json", function (data) {
 			var labels = [];
 			var values = [];
@@ -162,7 +164,7 @@
 				}
 			});
 
-			new Chart(document.getElementById("dax30-chart"), {
+			chart = new Chart(document.getElementById("dax30-chart"), {
 				type: 'line',
 				data: {
 					datasets: [{
@@ -223,6 +225,8 @@
 		}
 	};
 	function initDayChart() {
+		chart && chart.destroy();
+
 		$.get("./day-data.json", function (data) {
 			var values = [];
 
@@ -237,7 +241,7 @@
 				}
 			});
 
-			new Chart(document.getElementById("dax30-chart"), {
+			chart = new Chart(document.getElementById("dax30-chart"), {
 				type: 'line',
 				data: {
 					datasets: [{
@@ -252,11 +256,13 @@
 		});
 	}
 	function initHoursChart() {
+		chart && chart.destroy();
+
 		$.get("./day-data.json", function (data) {
 			var values = [];
 			var i = 0;
 			data.splice(1).forEach(function (item, index) {
-				if (i > 3) return;
+				if (i > 4) return;
 				var coeff = 1000 * 60 * 60;
 				var date = new Date(item.date.slice(0, -3));
 				var rounded = new Date(Math.round(date.getTime() / coeff) * coeff);
@@ -268,7 +274,7 @@
 				}
 			});
 
-			new Chart(document.getElementById("dax30-chart"), {
+			chart = new Chart(document.getElementById("dax30-chart"), {
 				type: 'line',
 				data: {
 					datasets: [{

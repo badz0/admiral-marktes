@@ -310,16 +310,19 @@ button {
       margin-right: 30px;
       color: #42455A; }
   .dax30-live__charts {
-    height: 557px;
+    max-height: 557px;
     background-color: #fff;
     -webkit-border-radius: 6px;
        -moz-border-radius: 6px;
             border-radius: 6px;
-    margin-bottom: 60px; }
+    margin-bottom: 60px;
+    position: relative; }
   .dax30-live__chart {
     padding: 0 0 40px 18px;
     position: relative;
     background-color: #fff; }
+  .dax30-live__canvas-chart {
+    max-height: 450px; }
   .dax30-live__tabs {
     min-height: 67px;
     padding: 0 20px;
@@ -347,6 +350,7 @@ button {
     background: none;
     border: none;
     width: 23%;
+    min-height: 67px;
     opacity: 0.5;
     color: #8B8EA7;
     font-size: 14px;
@@ -358,6 +362,13 @@ button {
     opacity: 1;
     color: #2572DE;
     border-bottom: 2px solid #2572DE; }
+  .dax30-live__global {
+    min-height: 336px;
+    background-color: #fff;
+    -webkit-border-radius: 6px;
+       -moz-border-radius: 6px;
+            border-radius: 6px;
+    padding: 40px 0; }
   .dax30-live__specifications-slider {
     position: relative; }
     .dax30-live__specifications-slider .slick-arrow {
@@ -870,7 +881,7 @@ button {
     -webkit-box-sizing: border-box;
        -moz-box-sizing: border-box;
             box-sizing: border-box; }
-  .dax30-why-trade__reason--on-desktop {
+  .dax30-why-trade__reasons--on-desktop {
     display: none; }
   .dax30-why-trade__reason-icon {
     height: 60px;

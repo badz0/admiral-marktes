@@ -95,15 +95,19 @@ $screen-lg-min: 1200px;
     }
   }
   &__charts {
-    height: 557px;
+    max-height: 557px;
     background-color: #fff;
     border-radius: 6px;
     margin-bottom: 60px;
+    position: relative;
   }
   &__chart {
     padding: 0 0 40px 18px;
     position: relative;
     background-color: #fff;
+  }
+  &__canvas-chart {
+    max-height: 450px;
   }
 
   &__tabs {
@@ -121,6 +125,7 @@ $screen-lg-min: 1200px;
     background: none;
     border: none;
     width: 23%;
+    min-height: 67px;
     opacity: 0.5;
     color: #8B8EA7;
     font-size: 14px;
@@ -135,6 +140,12 @@ $screen-lg-min: 1200px;
     border-bottom: 2px solid #2572DE;
   }
 
+  &__global {
+    min-height: 336px;
+    background-color: #fff;
+    border-radius: 6px;
+    padding: 40px 0;
+  }
   &__specifications-slider {
     position: relative;
     .slick-arrow {
