@@ -102,4 +102,10 @@ $screen-lg-min: 1200px;
       display: flex;
     }
   }
+
+  @media (min-width: $screen-lg-min) { 
+    &__reason-title--one-line {
+      margin-right: -8px;
+    }
+  }
 }

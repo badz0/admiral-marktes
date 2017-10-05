@@ -114,3 +114,6 @@
         display: -moz-box;
         display: -ms-flexbox;
         display: flex; } }
+  @media (min-width: 1200px) {
+    .dax30-why-trade__reason-title--one-line {
+      margin-right: -8px; } }
