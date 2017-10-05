@@ -281,7 +281,7 @@ button {
     -webkit-flex-basis: 155px;
         -ms-flex-preferred-size: 155px;
             flex-basis: 155px; }
-    .dax30-live__buy-btn:hover {
+    .dax30-live__buy-btn:hover, .dax30-live__buy-btn:focus {
       background-color: #22af5e; }
   .dax30-live__sell-btn {
     background-color: #DA1924;
@@ -289,7 +289,7 @@ button {
         -ms-flex-preferred-size: 155px;
             flex-basis: 155px;
     margin-right: 20px; }
-    .dax30-live__sell-btn:hover {
+    .dax30-live__sell-btn:hover, .dax30-live__sell-btn:focus {
       background-color: #bb151e; }
   .dax30-live__data-line {
     color: #8B8EA8;
@@ -828,7 +828,7 @@ button {
     margin-top: 20px; }
   .dax30-start__btn--green {
     background-color: #2ECC71; }
-    .dax30-start__btn--green:hover {
+    .dax30-start__btn--green:hover, .dax30-start__btn--green:focus {
       background-color: #22af5e; }
   @media (min-width: 767px) {
     .dax30-start {

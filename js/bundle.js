@@ -154,7 +154,7 @@
 			var i = 0;
 
 			data.forEach(function (item, index) {
-				if (i > 6) return;
+				if (i > 5) return;
 				var date = new Date(item.date.slice(0, -3));
 				if (values.length && date.getDate() === values[values.length - 1].x.getDate()) {
 					values[values.length - 1].y += item.volume;
@@ -230,7 +230,7 @@
 		$.get("./day-data.json", function (data) {
 			var values = [];
 
-			data.splice(1).forEach(function (item, index) {
+			data.forEach(function (item, index) {
 				var coeff = 1000 * 60 * 60;
 				var date = new Date(item.date.slice(0, -3));
 				var rounded = new Date(Math.round(date.getTime() / coeff) * coeff);
@@ -240,7 +240,7 @@
 					values.push({ x: rounded, y: item.volume });
 				}
 			});
-
+			console.log(data, values);
 			chart = new Chart(document.getElementById("dax30-chart"), {
 				type: 'line',
 				data: {

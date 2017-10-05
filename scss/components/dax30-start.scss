@@ -47,7 +47,7 @@ $screen-lg-min: 1200px;
 
   &__btn--green {
     background-color: #2ECC71;
-    &:hover {
+    &:hover, &:focus {
       background-color: #22af5e;
     }
   }
